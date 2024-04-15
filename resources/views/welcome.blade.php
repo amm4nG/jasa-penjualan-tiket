@@ -66,5 +66,35 @@
             </div>
         </div>
     </div>
+
+    <div class="container mt-3">
+        <form action="" method="post">
+            <div class="card p-4 shadow">
+                <div class="row">
+                    <h3 class="mb-4 display-6 text-primary">Ayo Wujudkan Perjalanan Anda</h3>
+                    <div class="col-md-3 mb-2">
+                        <label for="dari" class="mb-2">Dari</label>
+                        <input type="text" name="dari" id="dari" class="form-control">
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="tujuan" class="mb-2">Ke</label>
+                        <input type="text" name="tujuan" id="tujuan" class="form-control">
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="tanggal_pergi" class="mb-2">Tanggal Pergi</label>
+                        <input type="date" name="tanggal_pergi" id="tanggal_pergi" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tanggal_pulang" class="mb-2"><input type="checkbox" name="" id="">
+                            Tanggal Pulang</label>
+                        <input type="date" name="tanggal_pulang" id="tanggal_pulang" class="form-control">
+                    </div>
+                    <div class="col-md-2 mb-2 mt-4">
+                        <button class="btn btn-primary bg-primary mt-2 form-control text-white"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
     <!-- Hero End -->
 @endsection
