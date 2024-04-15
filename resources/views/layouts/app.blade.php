@@ -108,12 +108,16 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('/') }}js/main.js"></script>
+
     <script>
-        // Mengecek jika URL saat ini mengandung fragment #contact
-        if (window.location.hash === '#contact') {
-            // Menambahkan kelas 'active' ke link Contact
-            document.getElementById('contact-link').classList.add('active');
-            document.getElementById('home-link').classList.remove('active');
+        function homeActive() {
+            document.getElementById('home-link').classList.add('active')
+            document.getElementById('contact-link').classList.remove('active')
+        }
+
+        function contactActive() {
+            document.getElementById('contact-link').classList.add('active')
+            document.getElementById('home-link').classList.remove('active')
         }
     </script>
     @yield('scripts')

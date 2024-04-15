@@ -29,8 +29,8 @@
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav ms-auto">
-                    <a href="#" id="home-link" class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a>
-                    <a href="#contact" id="contact-link" class="nav-item nav-link">Contact</a> 
+                    <a href="#" onclick="homeActive()" id="home-link" class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a>
+                    <a href="#contact" onclick="contactActive()" id="contact-link" class="nav-item nav-link">Contact</a> 
                 </div>
             </div>
         </nav>
