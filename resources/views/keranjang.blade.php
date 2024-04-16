@@ -1,39 +1,56 @@
 @extends('layouts.app')
 @section('content')
     <!-- Hero Start -->
-    <div class="container-fluid py-5 mb-5 hero-header">
+    <div class="container-fluid py-5" style="margin-top: 5rem; margin-bottom: -80px">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
-                <div class="col-md-12 col-lg-7">
-                    <h4 class="mb-3 text-secondary">100% Terpercaya</h4>
-                    <h1 class="mb-5 display-3 text-primary">Temukan tiket eksklusif Anda di sini!</h1>
-                </div>
-                <div class="col-md-12 col-lg-5">
-                    <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active rounded">
-                                <img src="img/hero-img-1.png" class="img-fluid w-100 h-100 bg-secondary rounded"
-                                    alt="First slide">
-                                <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a>
-                            </div>
-                            <div class="carousel-item rounded">
-                                <img src="img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
-                                <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
-                            </div>
+                <div class="col-md-12">
+                    <div class="card p-3 shadow">
+                        <h3 class="text-primary">Hasil Checkout</h3>
+                        <div class="table-responsive">
+                            <table class="table table-sm table-bordered mt-3 text-center">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>Tanggal</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Arman</td>
+                                        <td>20-Juni-2025</td>
+                                        <td>
+                                            <a href="" style="width: 5rem" class="mb-1 btn btn-primary btn-sm text-white"><i class="fas fa-eye"></i> lihat</a>
+                                            <a href="" style="width: 5rem" class="mb-1 btn btn-danger btn-sm"><i class="fas fa-trash"></i> hapus</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Arman</td>
+                                        <td>20-Juni-2025</td>
+                                        <td>
+                                            <a href="" style="width: 5rem" class="mb-1 btn btn-primary btn-sm text-white"><i class="fas fa-eye"></i> lihat</a>
+                                            <a href="" style="width: 5rem" class="mb-1 btn btn-danger btn-sm"><i class="fas fa-trash"></i> hapus</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Arman</td>
+                                        <td>20-Juni-2025</td>
+                                        <td>
+                                            <a href="" style="width: 5rem" class="mb-1 btn btn-primary btn-sm text-white"><i class="fas fa-eye"></i> lihat</a>
+                                            <a href="" style="width: 5rem" class="mb-1 btn btn-danger btn-sm"><i class="fas fa-trash"></i> hapus</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselId"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-@endsection
+@endsection  
