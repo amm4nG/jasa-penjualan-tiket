@@ -68,33 +68,70 @@
     </div>
 
     <div class="container mt-3">
-        <form action="" method="post">
-            <div class="card p-4 shadow">
-                <div class="row">
-                    <h3 class="mb-4 display-6 text-primary">Ayo Wujudkan Perjalanan Anda</h3>
-                    <div class="col-md-3 mb-2">
-                        <label for="dari" class="mb-2">Dari</label>
-                        <input type="text" name="dari" id="dari" class="form-control">
-                    </div>
-                    <div class="col-md-3 mb-2">
-                        <label for="tujuan" class="mb-2">Ke</label>
-                        <input type="text" name="tujuan" id="tujuan" class="form-control">
-                    </div>
-                    <div class="col-md-2 mb-2">
-                        <label for="tanggal_pergi" class="mb-2">Tanggal Pergi</label>
-                        <input type="date" name="tanggal_pergi" id="tanggal_pergi" class="form-control">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="tanggal_pulang" class="mb-2"><input type="checkbox" name="" id="">
-                            Tanggal Pulang</label>
-                        <input type="date" name="tanggal_pulang" id="tanggal_pulang" class="form-control">
-                    </div>
-                    <div class="col-md-2 mb-2 mt-4">
-                        <button class="btn btn-primary bg-primary mt-2 form-control text-white"><i class="fas fa-search"></i> Search</button>
-                    </div>
+        {{-- <form action="" method="post"> --}}
+        <div class="card p-4 shadow">
+            <div class="row" id="form-pencarian-tiket">
+                <h3 class="mb-4 display-6 text-primary">Ayo Wujudkan Perjalanan Anda</h3>
+                <div class="col-md-3 mb-2">
+                    <label for="dari" class="mb-2">Dari</label>
+                    <input type="text" name="dari" id="dari" class="form-control">
+                </div>
+                <div class="col-md-3 mb-2">
+                    <label for="tujuan" class="mb-2">Ke</label>
+                    <input type="text" name="tujuan" id="tujuan" class="form-control">
+                </div>
+                <div class="col-md-2 mb-2">
+                    <label for="tanggal_pergi" class="mb-2">Tanggal Pergi</label>
+                    <input type="date" name="tanggal_pergi" id="tanggal_pergi" class="form-control">
+                </div>
+                <div class="col-md-2">
+                    <label for="tanggal_pulang" class="mb-2"><input type="checkbox" name="" id="">
+                        Tanggal Pulang</label>
+                    <input type="date" name="tanggal_pulang" id="tanggal_pulang" class="form-control">
+                </div>
+                <div class="col-md-2 mb-2 mt-4">
+                    <button class="btn btn-primary bg-primary mt-2 form-control text-white" onclick="searchTiket()"
+                        id="search-tiket"><i class="fas fa-search"></i> Search</button>
+                    <button style="display: none" onclick="resetTiket()"
+                        class="btn btn-primary bg-primary mt-2 form-control text-white" onclick="searchTiket()"
+                        id="reset-tiket">Reset</button>
                 </div>
             </div>
-        </form>
+            <hr>
+            <div id="biodata-pembeli"></div>
+        </div>
+        {{-- </form> --}}
     </div>
     <!-- Hero End -->
+@endsection
+@section('scripts')
+    <script>
+        function searchTiket() {
+            document.getElementById('search-tiket').style.display = "none"
+            document.getElementById('reset-tiket').style.display = "block"
+            document.getElementById('biodata-pembeli').innerHTML = `
+                <div class="row mt-3">
+                    <h3>Biodata Pembeli</h3>
+                    <div class="col-md-6">
+                        <label for="nama-lengkap" class="mb-2">Nama Lengkap</label>
+                        <input type="text" class="form-control" name="nama-lengkap" id="nama-lengkap">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="no-hp" class="mb-2">Nomor Handphone</label>
+                        <input type="number" class="form-control" name="no-hp" id="no-hp">
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <label for="foto-etiket" class="mb-2">Upload Foto E-Tiket</label>
+                        <input type="file" class="form-control">
+                    </div>  
+                </div>
+            `
+        }
+
+        function resetTiket() {
+            document.getElementById('search-tiket').style.display = "block"
+            document.getElementById('reset-tiket').style.display = "none"
+            document.getElementById('biodata-pembeli').innerHTML = ""
+        }
+    </script>
 @endsection
