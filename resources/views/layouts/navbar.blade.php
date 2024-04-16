@@ -23,7 +23,7 @@
     </div>
     <div class="container px-0">
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
-            <a href="index.html" class="navbar-brand">
+            <a href="{{ url('/') }}" class="navbar-brand">
                 <div class="input-group">
                     <img src="{{ asset('img/logo.jpg') }}" style="width: 80px; height: 80px" alt="">
                     <h1 class="text-primary display-6 mt-3 ms-2">TNNBP</h1>
