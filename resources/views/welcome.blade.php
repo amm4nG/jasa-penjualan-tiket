@@ -1,14 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" role="status"></div>
-    </div>
-    <!-- Spinner End -->
-
-    @include('layouts.navbar')
-
     <!-- Modal Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
@@ -91,10 +82,10 @@
                 </div>
                 <div class="col-md-2 mb-2 mt-4">
                     <button class="btn btn-primary bg-primary mt-2 form-control text-white" onclick="searchTiket()"
-                        id="search-tiket"><i class="fas fa-search"></i> Search</button>
+                        id="search-tiket"><i class="fas fa-search me-1"></i> Search</button>
                     <button style="display: none" onclick="resetTiket()"
-                        class="btn btn-primary bg-primary mt-2 form-control text-white" onclick="searchTiket()"
-                        id="reset-tiket">Reset</button>
+                        class="btn btn-primary bg-danger mt-2 form-control text-white" onclick="searchTiket()"
+                        id="reset-tiket"><i class="fas fa-times me-1"></i> Reset</button>
                 </div>
             </div>
             <hr>
@@ -112,18 +103,29 @@
             document.getElementById('biodata-pembeli').innerHTML = `
                 <div class="row mt-3">
                     <h3>Biodata Pembeli</h3>
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <label for="nama-lengkap" class="mb-2">Nama Lengkap</label>
                         <input type="text" class="form-control" name="nama-lengkap" id="nama-lengkap">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <label for="no-hp" class="mb-2">Nomor Handphone</label>
                         <input type="number" class="form-control" name="no-hp" id="no-hp">
                     </div>
-                    <div class="col-md-6 mt-3">
-                        <label for="foto-etiket" class="mb-2">Upload Foto E-Tiket</label>
-                        <input type="file" class="form-control">
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="form-control">
                     </div>  
+                    <div class="col-md-6 mb-3">
+                        <label for="harga" class="mb-2">Harga Tiket</label>
+                        <input type="number" id="harga" name="harga" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="foto-etiket" class="mb-2">Upload Foto E-Tiket</label>
+                        <input type="file" id="foto-etiket" name="foto-etiket" class="form-control">
+                    </div>
+                    <div class="col-md-3 mt-4">
+                        <button class="btn btn-primary mt-2 text-white"><i class="fas fa-plane"></i> Checkout</button>
+                    </div>
                 </div>
             `
         }

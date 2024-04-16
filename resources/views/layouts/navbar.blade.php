@@ -1,3 +1,9 @@
+<!-- Spinner Start -->
+<div id="spinner"
+    class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status"></div>
+</div>
+<!-- Spinner End -->
 <!-- Navbar start -->
 <div class="container-fluid fixed-top">
     <div class="container topbar bg-primary d-none d-lg-block">
@@ -29,8 +35,23 @@
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav ms-auto">
-                    <a href="#" onclick="homeActive()" id="home-link" class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a>
-                    <a href="#contact" onclick="contactActive()" id="contact-link" class="nav-item nav-link">Contact</a> 
+                    @if (Request::is('keranjang'))
+                        <a href="{{ url('/') }}"
+                            class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a>
+                        <a href="#contact" onclick="contactActiveKeranjang()" id="contact-link"
+                            class="nav-item nav-link">Contact</a>
+                        <a id="keranjang-link" onclick="keranjangActive()" href="#" class="nav-link {{ Request::is('keranjang') ? 'active' : '' }}"><i
+                                class="fas fa-shopping-cart"></i></a>
+                    @else
+                        <a href="#" onclick="homeActive()" id="home-link"
+                            class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a>
+                        <a href="#contact" onclick="contactActive()" id="contact-link"
+                            class="nav-item nav-link">Contact</a>
+                        <a href="{{ url('keranjang') }}"
+                            class="nav-link {{ Request::is('keranjang') ? 'active' : '' }}"><i
+                                class="fas fa-shopping-cart"></i></a>
+                    @endif
+
                 </div>
             </div>
         </nav>

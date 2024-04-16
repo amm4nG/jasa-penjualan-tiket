@@ -33,6 +33,7 @@
 </head>
 
 <body>
+    @include('layouts.navbar')
     @yield('content')
     <!-- Footer Start -->
     <div id="contact" class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
@@ -114,10 +115,20 @@
             document.getElementById('home-link').classList.add('active')
             document.getElementById('contact-link').classList.remove('active')
         }
-
+        
         function contactActive() {
             document.getElementById('contact-link').classList.add('active')
             document.getElementById('home-link').classList.remove('active')
+        }
+        
+        function contactActiveKeranjang() {
+            document.getElementById('contact-link').classList.add('active')
+            document.getElementById('keranjang-link').classList.remove('active')
+        }
+
+        function keranjangActive() {
+            document.getElementById('keranjang-link').classList.add('active')
+            document.getElementById('contact-link').classList.remove('active')
         }
     </script>
     @yield('scripts')
