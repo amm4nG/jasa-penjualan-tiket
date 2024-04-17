@@ -35,21 +35,21 @@
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav ms-auto">
-                    @if (Request::is('keranjang'))
+                    @if (Request::is('history'))
                         <a href="{{ url('/') }}"
-                            class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a>
-                        <a href="#contact" onclick="contactActiveKeranjang()" id="contact-link"
-                            class="nav-item nav-link">Contact</a>
-                        <a id="keranjang-link" onclick="keranjangActive()" href="#" class="nav-link {{ Request::is('keranjang') ? 'active' : '' }}"><i
-                                class="fas fa-shopping-cart"></i></a>
+                            class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}"><i class="fas fa-home"></i> Home</a>
+                        <a href="#contact" onclick="contactActivehistory()" id="contact-link"
+                            class="nav-item nav-link"><i class="fas fa-phone"></i> Contact</a>
+                        <a id="history-link" onclick="historyActive()" href="#" class="nav-link {{ Request::is('history') ? 'active' : '' }}"><i
+                                class="fas fa-history"></i> History</a>
                     @else
                         <a href="#" onclick="homeActive()" id="home-link"
-                            class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a>
+                            class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}"><i class="fas fa-home"></i> Home</a>
                         <a href="#contact" onclick="contactActive()" id="contact-link"
-                            class="nav-item nav-link">Contact</a>
-                        <a href="{{ url('keranjang') }}"
-                            class="nav-link {{ Request::is('keranjang') ? 'active' : '' }}"><i
-                                class="fas fa-shopping-cart"></i></a>
+                            class="nav-item nav-link"><i class="fas fa-phone"></i> Contact</a>
+                        <a href="{{ url('history') }}"
+                            class="nav-link {{ Request::is('history') ? 'active' : '' }}"><i
+                                class="fas fa-history"></i> History</a>
                     @endif
 
                 </div>

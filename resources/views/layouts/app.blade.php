@@ -121,13 +121,13 @@
             document.getElementById('home-link').classList.remove('active')
         }
         
-        function contactActiveKeranjang() {
+        function contactActivehistory() {
             document.getElementById('contact-link').classList.add('active')
-            document.getElementById('keranjang-link').classList.remove('active')
+            document.getElementById('history-link').classList.remove('active')
         }
 
-        function keranjangActive() {
-            document.getElementById('keranjang-link').classList.add('active')
+        function historyActive() {
+            document.getElementById('history-link').classList.add('active')
             document.getElementById('contact-link').classList.remove('active')
         }
     </script>

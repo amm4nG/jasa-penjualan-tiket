@@ -6,7 +6,7 @@
             <div class="row g-5 align-items-center">
                 <div class="col-md-12">
                     <div class="card p-3 shadow">
-                        <h3 class="text-primary">Hasil Checkout</h3>
+                        <h3 class="text-primary">History Checkout</h3>
                         <div class="table-responsive">
                             <table class="table table-sm table-bordered mt-3 text-center">
                                 <thead>

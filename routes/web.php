@@ -21,6 +21,6 @@ Route::get('dashboard', function () {
     return view('admin.dashboard');
 });
 
-Route::get('keranjang', function(){
-    return view('keranjang');
+Route::get('history', function(){
+    return view('history');
 });
