@@ -88,6 +88,88 @@
                         id="reset-tiket"><i class="fas fa-times me-1"></i> Reset</button>
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="invoice" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Hasil Chcekout</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card p-3 shadow-lg">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-2 text-center mb-3">
+                                                <img src="{{ asset('img/logo.jpg') }}" style="width: 60px; height: 60px;"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6 class="mt-1">Tunas Naimbaru Naposo Bulung Parmalim</h6>
+                                                <p style="margin-top: -8px; font-size: 13px">Admin Penjulan Tiket</p>
+                                            </div>
+                                            <div class="col-md-4 text-end">
+                                                <p style="font-size: 13px" class="mt-1">Jln. Poros Majene</p>
+                                                <p style="font-size: 13px; margin-top: -17px">arman@gmail.com</p>
+                                                <p style="font-size: 13px; margin-top: -17px">+6282290762799</p>
+                                            </div>
+                                        </div>
+                                        <hr style="margin-top: 1px">
+                                        <div class="row text-center">
+                                            <div class="col-md-12">
+                                                <h2 class="text-center">INVOICE</h2>
+                                                <P style="margin-top: -10px">No.1234</P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <h6>Nama Pembeli:</h6>
+                                                        <h6 style="margin-top: -5px">Arman</h6>
+                                                        <p style="margin-top: -8px;">arman@gmail.com</p>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <h6>Tanggal</h6>
+                                                        <p style="margin-top: -5px;">20 Agustus 2020</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <img src="{{ asset('img/tiket.png') }}" class="form-control" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-md-6">
+                                                <h6>Info Pembayaran</h6>
+                                                <p style="margin-top: -2px; font-size: 13px">Nama Bank: BNI</p>
+                                                <p style="margin-top: -20px; font-size: 13px">Nama Rekening: Andi</p>
+                                                <p style="margin-top: -20px; font-size: 13px">No. Rekening: 123456</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Harga: Rp. 1.000.000</h6>
+                                                <h6>Biaya Admin: Rp. 50.000</h6>
+                                                <h6>Total: Rp. 1.050.000</h6>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-center mt-2">Terimakasih</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary text-white">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <hr>
             <div id="biodata-pembeli"></div>
         </div>
@@ -124,7 +206,7 @@
                         <input type="file" id="foto-etiket" name="foto-etiket" class="form-control">
                     </div>
                     <div class="col-md-3 mt-4">
-                        <button class="btn btn-primary mt-2 text-white"><i class="fas fa-plane"></i> Checkout</button>
+                        <button data-bs-toggle="modal" data-bs-target="#invoice" class="btn btn-primary mt-2 text-white"><i class="fas fa-plane"></i> Checkout</button>
                     </div>
                 </div>
             `
