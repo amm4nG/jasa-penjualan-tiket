@@ -24,3 +24,7 @@ Route::get('dashboard', function () {
 Route::get('history', function(){
     return view('history');
 });
+
+Route::get('login', function(){
+    return view('login');
+});
