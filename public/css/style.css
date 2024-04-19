@@ -495,3 +495,9 @@
 }
 /*** Footer End ***/
 
+@media (max-width: 760px){
+    .text-end{
+        text-align: start !important;
+        margin-top: -10px;
+    }
+}
